@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Add the app_name for django project to include that with its preinstalled apps 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
