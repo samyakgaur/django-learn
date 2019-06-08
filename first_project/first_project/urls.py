@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#import the view from the app you created 
+from first_app import views
 
 urlpatterns = [
+    #add the follwing view url to type in so that it redirects there 'views/'
+    path('views/',views.index,name='index'),
     path('admin/', admin.site.urls),
 ]
