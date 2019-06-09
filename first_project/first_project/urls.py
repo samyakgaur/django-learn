@@ -15,11 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
 #import the view from the app you created 
 from first_app import views
+from second_app import views as view1
 
 urlpatterns = [
     #add the follwing view url to type in so that it redirects there 'views/'
+    
+    #url(r'^$/',views.index,name='index'),
     path('views/',views.index,name='index'),
+
+    
+    path('view2/',view1.index),
+
+    #url(r'^admin/',admin.site.urls),
     path('admin/', admin.site.urls),
 ]
