@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#for using url method use django.conf.urls
 from django.conf.urls import url
+from django.conf.urls import include
 #import the view from the app you created 
 from first_app import views
 from second_app import views as view1
@@ -28,6 +30,9 @@ urlpatterns = [
 
     
     path('view2/',view1.index),
+
+    #using include function 
+    url(r'^newext/',include('first_app.urls')),
 
     #url(r'^admin/',admin.site.urls),
     path('admin/', admin.site.urls),
