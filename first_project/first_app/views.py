@@ -7,7 +7,7 @@ from django.http import HttpResponse
 # def index(request):
 #     return HttpResponse('Hello World')
 
-#using render function now to learn templates 
+#using render function now to learn templates
 
 def index(request):
     my_dict={'insert_me':"Hello this is from views.py"}
