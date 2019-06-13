@@ -6,13 +6,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MY PICTURE </title>
+    <title>Django </title>
     <!-- linking the css file -->
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
 </head>
 <body>
-    <h1>Hello this is Samyak Gaur!</h1><br>
+    <h1>These are your Access Records </h1><br > 
+    {% if access_records %}
+    <table>
+        <th>Site Name</th>
+        <th>Date Accessed</th>
+        <!-- now insert a table row  -->
+        {% for acc in access_records %}
+        <tr>
+            <td>{{ acc.name }}</td>
+            <td>{{ acc.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p> no access record found</p>
+    {% endif %}
+
+    <!-- this is for displaying static image -->
     <!-- syntax to inject image in html file-->
-    <img src="{% static "images/samyakgaur.jpg"%}" height="100px" width="100px">
+    <!-- <img src="{% static "images/samyakgaur.jpg"%}" height="100px" width="100px"> -->
 </body>
 </html>
