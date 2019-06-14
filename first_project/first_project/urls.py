@@ -32,6 +32,7 @@ urlpatterns = [
     path('view2/',view1.index),
 
     #using include function and connecting it to 
+    # after typing newext we will be sent to urls file of first_app
     url(r'^newext/',include('first_app.urls')),
 
     #url(r'^admin/',admin.site.urls),
